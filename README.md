@@ -53,53 +53,44 @@ To make a new Measure, just hit the New Measure button from the Home tab.
 
 ![image](https://user-images.githubusercontent.com/9376306/143664286-4717632c-b824-4c11-910e-15f5ba7abfec.png)
 
+
 ```
 Total Costs = SUMX( Sales, Sales[Quantity] * RELATED( Products[Cost]))
-```
 
-```
+
 Average Quantity = AVERAGE(Sales[Quantity])
-```
 
-```
+
 Cumulative Sales to Date = 
 CALCULATE( [Total Sales],
      FILTER(ALLSELECTED( Dates ), Dates[Date] <= MAX( Dates[Date])))
-```
 
-```
+
 Profit Margin = DIVIDE([Total Profits], [Total Sales], 0 )
-```
 
-```
+
 Quantity Sold = SUMX(Sales, Sales[Quantity])
-```
 
-```
+
 Sales LastYear = CALCULATE( SUMX(Sales, Sales[Quantity] * Sales[Price]), SAMEPERIODLASTYEAR( Dates[Date] ) )
-```
 
-```
+
 Total Profits = [Total Sales] - [Total Costs]
-```
 
-```
+
 Total Sales = SUMX(Sales, Sales[Quantity] * Sales[Price])
-```
 
-```
+
 Total Transactions = COUNTROWS(Sales)
-```
 
-```
+
 Weekend Profits! = CALCULATE( [Total Profits], 
      FILTER(Dates, Dates[isWeekend] ="Yes"))
 #In order for this to work, add a custom column called isWeekend, or alternatively change this to 
 Weekend Profits v2 = CALCULATE( [Total Profits], 
      FILTER(Dates, OR(Dates[Day In Week] = 5, Dates[Day In Week] = 6)))
-```
      
-```
+
 Weekend Percentage = DIVIDE([Weekend Profits],[Total Profits], 0)
 ```
 
