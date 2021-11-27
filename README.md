@@ -1,11 +1,18 @@
 # Power_BI_Sales_Project
-Power BI Sales Project - Using Randomly Generated Product Names
+# Table of contents
+1. [Introduction](#introduction)
+2. [Step1](#step1)
+    1. [Sub paragraph](#subparagraph1)
+3. [Another paragraph](#paragraph2)
 
+
+## Power BI Sales Project - Using Randomly Generated Product Names <a name="introduction"></a>
 
 This Project is meant as a tutorial/walkthrough for people looking to analyze Sales Data.
 In the folder, we will have the project already made, but I will loosely explain how to recreate it from scratch.
 
-Step 1. Import Data
+## Step 1. Import Data <a name="step1"></a>
+
 Select the sheets from the Excel xlsx file that have our data. Make sure to grab the Sales tabs for 2018, 2019, and 2020.
 Click "Transform Data here"
 We can rename the data sheets from "Product Data" to simply "Products" and follow this format for all of our tabs.
