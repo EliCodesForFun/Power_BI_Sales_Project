@@ -1,9 +1,12 @@
 # Power_BI_Sales_Project
 # Table of contents
 1. [Introduction](#introduction)
-2. [Step1](#step1)
-    1. [Sub paragraph](#subparagraph1)
-3. [Another paragraph](#paragraph2)
+2. [Step 1. Import Data](#step1)
+3. [Step 2. Power Query](#step2)
+4. [Step 3. Import a Dates table.](#step3)
+5. [Step 4. Set up our Database Relationships](#step4)
+6. [Step 5. Setting up our Measures](#step5)
+7. [Step 6. Creating our Visualizations](#step6)
 
 
 ## Power BI Sales Project - Using Randomly Generated Product Names <a name="introduction"></a>
@@ -17,7 +20,7 @@ Select the sheets from the Excel xlsx file that have our data. Make sure to grab
 Click "Transform Data here"
 We can rename the data sheets from "Product Data" to simply "Products" and follow this format for all of our tabs.
 
-Step 2. Power Query
+## Step 2. Power Query  <a name="step2"></a>
 In Power Query we're going to Append the different Sales tabs (2018, 2019, and 2020) together into one database.
 ![image](https://user-images.githubusercontent.com/9376306/143663355-42ceb117-9bc4-49ee-b40f-1f57ded990c2.png)
 
@@ -27,7 +30,7 @@ Uncheck Enable Load for the individual tables. This will make it much more clear
 ![image](https://user-images.githubusercontent.com/9376306/143664214-741c2de5-5de7-4cf6-8a46-b0ad25605965.png)
 
 
-Step 3. Import a Dates table.
+## Step 3. Import a Dates table. <a name="step3"></a>
 One thing that's a great resource to have with Power BI is your own Dates table. My system is partly in Japanese so I'll share the Query you can import in the file. We use this Dates Table to apply filters, create slicers and timelines in our project. 
 Set the Date Range from January 1st, 2018 to December 31s, 2020.
 You simply hit New>Blank Query> Paste the query in and fill out the date range, and it will generate this.
@@ -35,16 +38,14 @@ You simply hit New>Blank Query> Paste the query in and fill out the date range, 
 ![image](https://user-images.githubusercontent.com/9376306/143663451-8d2c619a-e917-4b54-85ab-9d1e42dff65c.png)
 
 
-
-
-Step 4. Set up our Relationships
+## Step 4. Set up our Database Relationships <a name="step4"></a>
 
 ![image](https://user-images.githubusercontent.com/9376306/143664222-31274780-10ab-42e7-a298-edbccdf042ad.png)
 From here we will have to establish a relationship from the Dates table to the Sales table.
 Set it up as a 1 -> Many for Dates[Date] -> Sales[Purchase Date] by dragging the Date fields within Dates right onto the Purchase Date field within Sales.
 
 
-Step 5. Setting up our Measures
+## Step 5. Setting up our Measures  <a name="step5"></a>
 Measures in Power BI are ways to do advanced calculations in a simple way, where it will adjust automatically with how we filter the data.
 You won't need every single measure in here, but I wanted to run through a lot of nice ones I've found, and some that are considered pretty fundamental for a Sales model.
 To make a new Measure, just hit the New Measure button from the Home tab.
@@ -70,7 +71,7 @@ CALCULATE( [Total Sales],
 
 
 
-Step 6. Creating our visualizations.
+## Step 6. Creating our visualizations. <a name="step6"></a>
 Here's an example of a Visualization you can make.
 Add a Stacked Bar Chart.
 Drag the Customer Name and the [Total Values] Measure onto the graph.
