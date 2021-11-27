@@ -60,15 +60,47 @@ Total Costs = SUMX( Sales, Sales[Quantity] * RELATED( Products[Cost]))
 Average Quantity = AVERAGE(Sales[Quantity])
 ```
 
-
 ```
-Cumulative Sales = 
+Cumulative Sales to Date = 
 CALCULATE( [Total Sales],
      FILTER(ALLSELECTED( Dates ), Dates[Date] <= MAX( Dates[Date])))
 ```
 
+```
+Profit Margin = DIVIDE([Total Profits], [Total Sales], 0 )
+```
 
+```
+Quantity Sold = SUMX(Sales, Sales[Quantity])
+```
 
+```
+Sales LastYear = CALCULATE( SUMX(Sales, Sales[Quantity] * Sales[Price]), SAMEPERIODLASTYEAR( Dates[Date] ) )
+```
+
+```
+Total Profits = [Total Sales] - [Total Costs]
+```
+
+```
+Total Sales = SUMX(Sales, Sales[Quantity] * Sales[Price])
+```
+
+```
+Total Transactions = COUNTROWS(Sales)
+```
+
+```
+Weekend Profits! = CALCULATE( [Total Profits], 
+     FILTER(Dates, Dates[isWeekend] ="Yes"))
+#In order for this to work, add a custom column called isWeekend, or alternatively change this to 
+Weekend Profits v2 = CALCULATE( [Total Profits], 
+     FILTER(Dates, OR(Dates[Day In Week] = 5, Dates[Day In Week] = 6)))
+```
+     
+```
+Weekend Percentage = DIVIDE([Weekend Profits],[Total Profits], 0)
+```
 
 
 ## Step 6. Creating our visualizations. <a name="step6"></a>
