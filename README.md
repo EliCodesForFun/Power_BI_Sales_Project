@@ -44,6 +44,24 @@ To make a new Measure, just hit the New Measure button from the Home tab.
 
 ![image](https://user-images.githubusercontent.com/9376306/143664286-4717632c-b824-4c11-910e-15f5ba7abfec.png)
 
+```
+Total Costs = SUMX( Sales, Sales[Quantity] * RELATED( Products[Cost]))
+```
+
+```
+Average Quantity = AVERAGE(Sales[Quantity])
+```
+
+
+```
+Cumulative Sales = 
+CALCULATE( [Total Sales],
+     FILTER(ALLSELECTED( Dates ), Dates[Date] <= MAX( Dates[Date])))
+```
+
+
+
+
 
 Step 6. Creating our visualizations.
 Here's an example of a Visualization you can make.
