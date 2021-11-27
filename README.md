@@ -20,6 +20,7 @@ Step 3. Import a Dates table.
 One thing that's a great resource to have with Power BI is your own Dates table. My system is partly in Japanese so I'll share the Query you can import in the file. We use this Dates Table to apply filters, create slicers and timelines in our project. 
 Set the Date Range from January 1st, 2018 to December 31s, 2020.
 You simply hit New>Blank Query> Paste the query in and fill out the date range, and it will generate this.
+
 ![image](https://user-images.githubusercontent.com/9376306/143663451-8d2c619a-e917-4b54-85ab-9d1e42dff65c.png)
 
 
@@ -34,8 +35,10 @@ Step 5. Making some visualizations.
 Here's an example of a Visualization you can make.
 Add a Stacked Bar Chart.
 Drag the Customer Name and the [Total Values] Measure onto the graph.
+
 ![image](https://user-images.githubusercontent.com/9376306/143663795-5c2cf0e2-daaa-4f50-9b83-2524b9156dda.png)
 You can click to the formatting tab and add Data labels for clarity.
+
 ![image](https://user-images.githubusercontent.com/9376306/143663816-e0dd23fa-67da-4c16-9966-428b1ff65b94.png)
 
 
