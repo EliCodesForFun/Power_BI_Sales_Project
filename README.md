@@ -1,4 +1,4 @@
-# Power_BI_Sales_Project
+# Power BI Sales Project
 # Table of contents
 1. [Introduction](#introduction)
 2. [Step 1. Import Data](#step1)
@@ -41,6 +41,7 @@ You simply hit New>Blank Query> Paste the query in and fill out the date range, 
 ## Step 4. Set up our Database Relationships <a name="step4"></a>
 
 ![image](https://user-images.githubusercontent.com/9376306/143664222-31274780-10ab-42e7-a298-edbccdf042ad.png)
+
 From here we will have to establish a relationship from the Dates table to the Sales table.
 Set it up as a 1 -> Many for Dates[Date] -> Sales[Purchase Date] by dragging the Date fields within Dates right onto the Purchase Date field within Sales.
 
